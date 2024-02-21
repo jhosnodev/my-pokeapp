@@ -1,11 +1,13 @@
-import {Header, Footer} from '../components'
+import { useState } from 'react'
+import { Header, Footer } from '../components'
 
 export default function Home() {
+  const [query, setQuery] = useState("")
   return (
     <>
-    <Header/>
-    <div>Home</div>
-    <Footer/>
+      <Header query={query} setQuery={setQuery} />
+      <div>Home</div>
+      <Footer />
     </>
   )
 }

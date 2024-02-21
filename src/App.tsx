@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Home, Items, Pokemon, Pokemons, Type } from './pages'
+import { Home, Items, Pokemon, Pokemons, Type, Map } from './pages'
 
 import './App.css';
 
@@ -12,6 +12,7 @@ function App() {
         <Route path="/pokemons" element={<Pokemons />} />
         <Route path="/pokemons/:name" element={<Pokemon />} />
         <Route path="/type" element={<Type />} />
+        <Route path="/map" element={<Map />} />
       </Routes>
    {/*    <div className="App">
     

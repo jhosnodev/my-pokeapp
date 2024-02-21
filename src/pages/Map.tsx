@@ -2,12 +2,12 @@ import { useState } from "react"
 import { Footer, Header } from "../components"
 
 
-export default function Items() {
+export default function Map() {
   const [query, setQuery] = useState("")
   return (
     <>
       <Header query={query} setQuery={setQuery} />
-      <div>Items</div>
+      <div>Map</div>
       <Footer />
     </>
   )

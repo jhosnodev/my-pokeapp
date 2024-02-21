@@ -1,7 +1,14 @@
-import React from 'react'
+import { useState } from "react"
+import { Footer, Header } from "../components"
+
 
 export default function Type() {
+  const [query, setQuery] = useState("")
   return (
-    <div>Type</div>
+    <>
+      <Header query={query} setQuery={setQuery} />
+      <div>Type</div>
+      <Footer />
+    </>
   )
 }
