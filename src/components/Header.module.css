@@ -1,0 +1,20 @@
+.header {
+  display: grid;
+  width: 100vw;
+  height: 4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  place-items: center;
+  background: transparent;
+  position: sticky;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.SearchInput {
+  border-radius: 5px;
+  padding: 0.55rem;
+  border: 1px grey solid;
+  background-color: rgba(128, 128, 128, 0.164);
+}
