@@ -1,16 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-*, 
+/* 
+colores de la app
+amarillo: #FFCB05
+azul claro: #3D7DCA
+azul: #003A70
+bg white: #e3e9f4
+bg black: #282a36
+text to bg black : #f8f8f2
+decorations color: #414558
+
+*/
+
+:root {
+  --bg-color: #e3e9f4;
+  --bg-gradient: linear-gradient(
+    180deg,
+    rgb(61, 125, 202) 0%,
+    rgb(0, 58, 112) 100%
+  );
+  --bg-gradient-invert: linear-gradient(
+    360deg,
+    rgb(61, 125, 202) 0%,
+    rgb(0, 58, 112) 100%
+  );
+}
+
+*,
 *:after,
 *:before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  
 }
-body{
+body {
+  font-smooth: auto;
   font-size: 100%;
   list-style-type: none;
   font-family: "Poppins", sans-serif;
+  background-color: #e3e9f4;
+  color: #282a36;
+}
 
+.app{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+}
+
+.app main{
+  background: var(--bg-color);
+  padding: .73rem;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
 }
