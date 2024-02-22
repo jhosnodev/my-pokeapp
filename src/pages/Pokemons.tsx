@@ -1,12 +1,14 @@
 import { useState } from "react"
 import { Header, Footer } from "../components"
 import styles from './pokemons.module.css'
+import {fetchPkms} from '../api/fetchPomemons'
 
 import Bulbasaur from '../assets/images/bulbasaur.gif'
 import { Link } from "react-router-dom"
 
 export default function Pokemons() {
   const [query, setQuery] = useState("")
+
   return (
     <>
       <Header query={query} setQuery={setQuery} />
