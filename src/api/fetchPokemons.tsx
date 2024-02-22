@@ -13,7 +13,7 @@ export async function fetchPkms(): Promise<Pokemon[]> {
     const pokemons = results.results.map((pkm: any) => ({
         id: pkm.national_number,
         name: pkm.name,
-        type: pkm.type,
+        types: pkm.type,
         imgSrc: `http://img.pokemondb.net/sprites/black-white/anim/normal/${formatPkmName(pkm.name.toLowerCase())}.gif`
     }))
 
