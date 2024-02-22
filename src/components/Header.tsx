@@ -8,6 +8,9 @@ type HeaderProps = {
 export default function Header({ query, setQuery }: HeaderProps) {
   return (
     <header className={styles.header}>
+      <h2>
+        Pokemons
+      </h2>
       <input
         className={styles.SearchInput}
         value={query}
