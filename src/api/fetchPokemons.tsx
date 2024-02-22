@@ -20,6 +20,6 @@ export async function fetchPkms(): Promise<Pokemon[]> {
     const uniquePkms = pokemons.filter((pkm: any, index: number) =>
     pokemons.findIndex((other: any) => other.id === pkm.id) === index
     )
-    console.log("results", uniquePkms)
+    // console.log("results", uniquePkms)
     return uniquePkms
 }

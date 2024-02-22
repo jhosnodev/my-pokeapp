@@ -7,18 +7,24 @@ import { fetchPkms } from '../api/fetchPokemons'
 
 import { Link } from "react-router-dom"
 import { pkmTypes } from "../utils/types"
+import Loading from "../components/Loading"
 
 export default function Pokemons() {
   const [query, setQuery] = useState("")
+  const [loading, setloading] = useState(false)
   const [pokemons, setPokemons] = useState<Pokemon[]>([])
 
   useEffect(() => {
+    setloading(true)
     const allPkms = async () => {
       const getAllPkms = await fetchPkms()
       setPokemons(getAllPkms)
+      setloading(false)
     }
     allPkms()
   }, [])
+  if (loading || !pokemons) return <Loading />
+
 
   return (
     <>
