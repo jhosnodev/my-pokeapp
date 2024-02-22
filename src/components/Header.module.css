@@ -15,6 +15,16 @@
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
+.header a {
+  color: #ffcb05;
+  transition: all 0.2s ease-in-out 0.2s;
+}
+.header a:hover {
+  color: #c29c05;
+  /* font-size: 1.25rem; */
+  scale: 1.01;
+}
+
 .SearchInput {
   font-family: "Poppins", sans-serif;
   color: #282a36;

@@ -21,17 +21,17 @@ export default function Pokemons() {
   return (
     <>
       <Header query={query} setQuery={setQuery} />
-      <main>Pokemon (All)
+      <main>
         {pokemons?.slice(0, 151).map((pkm) =>
         (
           <article key={Number(pkm.id)}>
-          <Link to={`/${pkm}`} className={styles.listItem}>
+            <Link to={`/${pkm}`} className={styles.listItem}>
               <img src={pkm.imgSrc} alt="001 - Bulbasaur" className={styles.listItemIcon} />
               <div className={styles.listItemText}>
                 <span>{pkm.name}</span>{" "}
                 <span>{pkm.id}</span>
               </div>
-            </Link> 
+            </Link>
           </article>
 
         ))}
