@@ -31,11 +31,14 @@ export default function Pokemons() {
               <img src={pkm.imgSrc} alt={`${pkm.id} - ${pkm.name}`} className={styles.listItemIcon} />
               <div className={styles.listItemText}>
                 <span>{pkm.name}</span>{" "}
-                <span>{pkm.id}</span>
-                <span>{pkm.types.map((type: string, index: number) => <span key={index}>
-                  {/* <img src={pkmTypes[typ]} alt={`${pkm.id} - ${pkm.name}`} className={styles.listItemIcon} /> */}
-                  {type}
-                </span>)}</span>
+                <span className={styles.item}>{pkm.id}</span>
+                <div className={styles.listItemLabelType}>
+                  {pkm.types.map((type: string) =>
+                    <span key={pkmTypes[type].id} className={styles.labelType} style={{ backgroundImage: `linear-gradient(105deg,${pkmTypes[type].color} 27px,#5A5A5A 28px,#5A5A5A)` }}>
+                      <img src={pkmTypes[type].icon} alt={`${pkmTypes[type].value}`} className={styles.listItemIconType} />
+                      {pkmTypes[type].value}
+                    </span>)}
+                </div>
               </div>
             </Link>
           </article>

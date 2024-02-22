@@ -14,7 +14,7 @@
   text-decoration: none;
   align-items: center;
   gap: 0.5rem;
-  width: 14rem;
+  width: 16rem;
   height: 6rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
     rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
@@ -40,6 +40,32 @@
   height: 3rem;
   object-fit: contain;
 }
+.listItemLabelType {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: .3rem;
+}
+.labelType {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: start;
+  gap: 0.5rem;
+  border-radius: 10px;
+  background: #5a5a5a;
+  color: #e3e9f4;
+  padding: .1rem .5rem;
+  font-size: 0.6rem;
+}
+.listItemIconType {
+  width: 0.9rem;
+  height: 0.9rem;
+  object-fit: contain;
+}
 
 .listItemText {
   flex-grow: 2;
@@ -58,7 +84,7 @@
   font-weight: bold;
 }
 
-.listItemText > :last-child {
+.item {
   color: grey;
   font-weight: bolder;
   font-size: 0.8rem;
