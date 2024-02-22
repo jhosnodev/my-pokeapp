@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import pokeball from '../assets/images/pokeball.png'
 import pikachu from '../assets/images/pikachu.png'
-import items from '../assets/images/items.png'
+
 import pointer from '../assets/images/pointer.png'
 import styles from './Footer.module.css'
 

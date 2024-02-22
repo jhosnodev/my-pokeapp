@@ -1,22 +1,25 @@
+import { Pokemon } from "../types/types"
 //! Traer todos los pokms de la 1ra gen
+import { formatPkmName } from "../utils/utils"
 const URL = "https://unpkg.com/pokemons@1.1/pokemons.json"
 
-export async function fetchPkms() {
+export async function fetchPkms(): Promise<Pokemon[]> {
     const response = await fetch(URL)
     if (!response.ok) {
-        throw new Error("Failed to fecth pokemons")
+        throw new Error(response.statusText)
     }
-    const result = await response.json()
-    console.log(result)
-
-    const pokemons = result.map((pkm: any) => ({
-        name: pkm.name,
+    const results = await response.json();
+    
+    const pokemons = results.results.map((pkm: any) => ({
         id: pkm.national_number,
-        imgSrc: `http://img.pokemondb.net/sprites/black-white/anim/normal/${pkm.name}.gif`
+        name: pkm.name,
+        type: pkm.type,
+        imgSrc: `http://img.pokemondb.net/sprites/black-white/anim/normal/${formatPkmName(pkm.name.toLowerCase())}.gif`
     }))
 
     const uniquePkms = pokemons.filter((pkm: any, index: number) =>
-        pokemons.findIndex((other: any) => other.id === pkm.id) === index
+    pokemons.findIndex((other: any) => other.id === pkm.id) === index
     )
+    console.log("results", uniquePkms)
     return uniquePkms
 }
