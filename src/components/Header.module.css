@@ -33,3 +33,17 @@
   border: 1px grey solid;
   background-color: rgba(251, 251, 251, 0.708);
 }
+
+
+.brand{
+
+}
+
+.brandSm{
+  display: none;
+}
+@media screen and (min-width: 560px) {
+  .brandSm{
+    display: block;
+  } 
+}

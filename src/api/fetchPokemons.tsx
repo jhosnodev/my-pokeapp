@@ -21,5 +21,5 @@ export async function fetchPkms(): Promise<Pokemon[]> {
     pokemons.findIndex((other: any) => other.id === pkm.id) === index
     )
     // console.log("results", uniquePkms)
-    return uniquePkms
+    return uniquePkms.slice(0,151)
 }

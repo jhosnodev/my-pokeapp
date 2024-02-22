@@ -25,12 +25,13 @@ export default function Pokemons() {
   }, [])
   if (loading || !pokemons) return <Loading />
 
+  const filteredPkms = pokemons.filter(pkm => { return pkm.name.toLowerCase().match(query.toLowerCase()) })
 
   return (
     <>
       <Header query={query} setQuery={setQuery} />
       <main className={styles.pkmList}>
-        {pokemons?.slice(0, 151).map((pkm) =>
+        {filteredPkms?.map((pkm) =>
         (
           <article key={Number(pkm.id)}>
             <Link to={`/pokemons/${pkm.name.toLowerCase()}`} className={styles.listItem}>

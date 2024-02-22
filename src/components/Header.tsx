@@ -10,8 +10,8 @@ export default function Header({ query, setQuery }: HeaderProps) {
   return (
     <header className={styles.header}>
       <Link to={'/'}>
-        <h2>
-          Pokemons
+        <h2 className={styles.brand}>
+          P<span className={styles.brandSm}>okemons</span>
         </h2>
       </Link>
       <input
