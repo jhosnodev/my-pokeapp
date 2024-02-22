@@ -1,5 +1,6 @@
 import styles from './Header.module.css'
 import { Link } from 'react-router-dom';
+import pokeicon from '../assets/images/pokeicon.png'
 
 type HeaderProps = {
   query: string;
@@ -11,7 +12,7 @@ export default function Header({ query, setQuery }: HeaderProps) {
     <header className={styles.header}>
       <Link to={'/'}>
         <h2 className={styles.brand}>
-          P<span className={styles.brandSm}>okemons</span>
+          <img src={pokeicon} alt="Pokemon" className={styles.pokeicon} />{" "}<span className={styles.brandSm}>Pokemons</span>
         </h2>
       </Link>
       <input
