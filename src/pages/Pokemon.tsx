@@ -33,7 +33,7 @@ export default function Pokemon() {
       };
       myPkm();
     }
-  }, []);
+  }, [name]);
 
   if (loading) return <Loading />;
 
