@@ -1,6 +1,6 @@
-import styles from './Header.module.css'
-import { Link } from 'react-router-dom';
-import pokeicon from '../assets/images/pokeicon.png'
+import styles from "./Header.module.css";
+import { Link, useLocation } from "react-router-dom";
+import pokeicon from "../assets/images/pokeicon.png";
 
 type HeaderProps = {
   query: string;
@@ -8,20 +8,25 @@ type HeaderProps = {
 };
 
 export default function Header({ query, setQuery }: HeaderProps) {
+  const { pathname } = useLocation();
+
   return (
     <header className={styles.header}>
-      <Link to={'/'}>
+      <Link to={"/"}>
         <h2 className={styles.brand}>
-          <img src={pokeicon} alt="Pokemon" className={styles.pokeicon} />{" "}<span className={styles.brandSm}>Pokemons</span>
+          <img src={pokeicon} alt="Pokemon" className={styles.pokeicon} />{" "}
+          <span className={styles.brandSm}>Pokemons</span>
         </h2>
       </Link>
-      <input
-        className={styles.SearchInput}
-        value={query}
-        placeholder="Search Pokemon"
-        onChange={(event) => setQuery(event.target.value.trim())}
-        type="text"
-      />
+      {pathname.includes("/pokemons") ? (
+        <input
+          className={styles.SearchInput}
+          value={query}
+          placeholder="Search Pokemon"
+          onChange={(event) => setQuery(event.target.value.trim())}
+          type="text"
+        />
+      ) : null}
     </header>
-  )
+  );
 }

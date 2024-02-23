@@ -7,7 +7,7 @@ export default function Type() {
   return (
     <>
       <Header query={query} setQuery={setQuery} />
-      <div>Type</div>
+      <main>Type</main>
       <Footer />
     </>
   )

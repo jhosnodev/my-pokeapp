@@ -9,7 +9,7 @@ export async function fetchPkms(): Promise<Pokemon[]> {
         throw new Error(response.statusText)
     }
     const results = await response.json();
-    
+
     const pokemons = results.results.map((pkm: any) => ({
         id: pkm.national_number,
         name: pkm.name,
@@ -18,8 +18,8 @@ export async function fetchPkms(): Promise<Pokemon[]> {
     }))
 
     const uniquePkms = pokemons.filter((pkm: any, index: number) =>
-    pokemons.findIndex((other: any) => other.id === pkm.id) === index
+        pokemons.findIndex((other: any) => other.id === pkm.id) === index
     )
     // console.log("results", uniquePkms)
-    return uniquePkms.slice(0,151)
+    return uniquePkms.slice(0, 151)
 }

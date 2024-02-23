@@ -7,7 +7,7 @@ export default function Items() {
   return (
     <>
       <Header query={query} setQuery={setQuery} />
-      <div>Items</div>
+      <main>Items</main>
       <Footer />
     </>
   )

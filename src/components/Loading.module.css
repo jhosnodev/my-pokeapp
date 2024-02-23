@@ -12,7 +12,7 @@
   height: 5rem;
   width: 5rem;
   animation-name: loading;
-  animation: loading 1s linear infinite;
+  animation: loading 1s ease-in-out infinite;
 }
 
 @keyframes loading {

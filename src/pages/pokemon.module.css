@@ -1,0 +1,13 @@
+.goBackBtn {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out 0.2s;
+  border: none;
+  background: #003A70;
+  color: var(--bg-color);
+  font-weight: 700;
+}
+.goBackBtn:hover {
+  scale: 1.05;
+}

@@ -33,8 +33,15 @@ decorations color: #414558
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  
 }
+
+a,
+input,
+button,
+p {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   font-smooth: auto;
   font-size: 100%;
@@ -45,37 +52,46 @@ body {
   box-sizing: border-box;
 }
 
-.app{
+.app {
   display: grid;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
 }
 
-.app main{
+.app main, main {
   background: var(--bg-color);
-  padding: .73rem;
+  padding: 0.73rem;
   height: 100%;
   overflow: auto;
   box-sizing: border-box;
+  gap: 1rem;
+  margin: 1rem auto;
+  min-height: 100vh;
+}
+@media screen and (min-width: 560px) {
+  .app main, main {
+    gap: 2rem;
+    margin: 2rem;
+  }
 }
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: #003a70 #e3e9f4;
-  }
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #003a70 #e3e9f4;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 10px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #e3e9f4;
-  }
+*::-webkit-scrollbar-track {
+  background: #e3e9f4;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #003a70;
-    border-radius: 5px;
-    border: 3px solid #e3e9f4;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #003a70;
+  border-radius: 5px;
+  border: 3px solid #e3e9f4;
+}

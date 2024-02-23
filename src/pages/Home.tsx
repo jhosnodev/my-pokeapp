@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Header query={query} setQuery={setQuery} />
-      <div>Home</div>
+      <main>Home</main>
       <Footer />
     </>
   )

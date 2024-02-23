@@ -7,7 +7,7 @@ export default function Map() {
   return (
     <>
       <Header query={query} setQuery={setQuery} />
-      <div>Map</div>
+      <main>Map</main>
       <Footer />
     </>
   )

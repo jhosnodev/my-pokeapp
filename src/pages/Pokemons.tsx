@@ -37,8 +37,8 @@ export default function Pokemons() {
             <Link to={`/pokemons/${pkm.name.toLowerCase()}`} className={styles.listItem}>
               <img src={pkm.imgSrc} alt={`${pkm.id} - ${pkm.name}`} className={styles.listItemIcon} />
               <div className={styles.listItemText}>
-                <span>{pkm.name}</span>{" "}
-                <span className={styles.item}>{pkm.id}</span>
+                <h4>{pkm.name}</h4>{" "}
+                <p className={styles.item}>{pkm.id}</p>
                 <div className={styles.listItemLabelType}>
                   {pkm.types.map((type: string) =>
                     <span key={pkmTypes[type].id} className={styles.labelType} style={{ backgroundImage: `linear-gradient(105deg,${pkmTypes[type].color} 27px,#5A5A5A 28px,#5A5A5A)` }}>
