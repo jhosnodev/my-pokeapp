@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import style from "./pokemon.module.css";
 import { fetchPkm } from "../api/fetchpokemon";
+import genI from '../assets/genI.png'
 import { pkmTypes, capitalizeWords } from "../utils/types";
 import { capitalizarPrimeraLetra } from "../utils/utils";
 
@@ -53,9 +54,7 @@ export default function Pokemon() {
         <div
           className={style.curved}
           style={{
-            background: `${pkmTypes[capitalizeWords(pkm?.types[0]?.name)].color}`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "right",
+            background: `${pkmTypes[capitalizeWords(pkm?.types[0]?.name)].color}`
           }}
         ></div>
         <div className={style.cardContainer}>
@@ -70,7 +69,7 @@ export default function Pokemon() {
               <div className={style.cardHeader}>
                 <h2>
                   {pkm?.id}
-                  {" - "}
+                  {" "}
                   {capitalizarPrimeraLetra(pkm?.name)}
                 </h2>
                 <div className={style.typesLabelContainer}>
@@ -92,11 +91,15 @@ export default function Pokemon() {
                     </a>
                   ))}
                 </div>
+                <p>{pkm.genera}</p>
+                <p>Generation {" "}{pkm.generation === "generation-i" && <img
+                  src={genI}
+                  alt={pkm.generation}
+                  className={""}
+                />}</p>
 
               </div>
-              <p>{pkm.genera}</p>
               <p>Habitat: {pkm.habitat}</p>
-              <p>Generation: {pkm.generation}</p>
               <p>Base happiness: {pkm.base_happiness}</p>
               <p>Weight: {pkm?.weight}Kg</p>
               <p>Height: {pkm?.height}mt</p>
@@ -112,7 +115,7 @@ export default function Pokemon() {
           </div>
         </div>
       </main>
-{/*       <Footer /> */}
+      {/*       <Footer /> */}
     </>
   );
 }
