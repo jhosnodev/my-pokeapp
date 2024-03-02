@@ -12,13 +12,13 @@ export default function Header({ query, setQuery }: HeaderProps) {
 
   return (
     <header className={styles.header}>
-      <Link to={"/"}>
+      <Link to={"/my-pokeapp/"}>
         <h2 className={styles.brand}>
           <img src={pokeicon} alt="Pokemon" className={styles.pokeicon} />{" "}
           <span className={styles.brandSm}>Pokemons</span>
         </h2>
       </Link>
-      {pathname.includes("/pokemons") ? (
+     
         <input
           className={styles.SearchInput}
           value={query}
@@ -26,7 +26,7 @@ export default function Header({ query, setQuery }: HeaderProps) {
           onChange={(event) => setQuery(event.target.value.trim())}
           type="text"
         />
-      ) : null}
+      
     </header>
   );
 }

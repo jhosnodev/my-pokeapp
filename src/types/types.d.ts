@@ -19,6 +19,7 @@ export type PokemonDetail = {
   weight: number,
   height: number,
   types: PkmTypes[],
+  stats: PkmStats[],
   abilities: PkmAbilities[]
 }
 
@@ -29,4 +30,8 @@ type PkmTypes = {
 type PkmAbilities = {
   name: string,
   url: string
+}
+type PkmStats = {
+  name: string,
+  base_stat: number
 }

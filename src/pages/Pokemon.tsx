@@ -1,6 +1,6 @@
 import { PokemonDetail } from "../types/types";
 import { useNavigate, useParams } from "react-router-dom";
-import {  Header } from "../components";
+import { Header } from "../components";
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import style from "./pokemon.module.css";
@@ -24,6 +24,7 @@ export default function Pokemon() {
     generation: "",
     types: [],
     abilities: [],
+    stats: [],
   });
   const navegate = useNavigate();
 
@@ -80,7 +81,7 @@ export default function Pokemon() {
                       className={style.typesLabel}
                       style={{
                         backgroundImage: `linear-gradient(105deg,${pkmTypes[capitalizeWords(type.name)].color
-                          } 55px,#5A5A5A 56px,#5A5A5A)`,
+                          } 50px,#5A5A5A 49px,#5A5A5A)`,
                       }}
                     >
                       <img
@@ -99,18 +100,20 @@ export default function Pokemon() {
                 />}</p>
 
               </div>
-              <p>Habitat: {pkm.habitat}</p>
-              <p>Base happiness: {pkm.base_happiness}</p>
-              <p>Weight: {pkm?.weight}Kg</p>
-              <p>Height: {pkm?.height}mt</p>
-              <p>
-                Abilities:{" "}
-                {pkm?.abilities.map((ability: any, index: number) => (
-                  <span key={index} className={style.abilitiesList}>
-                    {ability.name}
-                  </span>
-                ))}
-              </p>
+              <h3>Data</h3>
+              <div className={style.cardInfoData}>
+                <div><p>Habitat</p> <span>{capitalizarPrimeraLetra(pkm.habitat.replace("-", " "))}</span></div>
+                <div><p>Happiness</p> <span>{pkm.base_happiness}</span></div>
+                <div><p>Weight</p> <span>{pkm?.weight}Kg</span></div>
+                <div><p>Height</p> <span>{pkm?.height}m</span></div>
+              </div>
+              <h3>Base stats</h3>
+              <div className={style.cardInfoStats}>
+                {pkm.stats.map((stat: any, index: number) =>
+                  <div key={index}><p>{stat.name === "hp" ? stat.name.toUpperCase() : capitalizarPrimeraLetra(stat.name.replace("-", " "))}</p><span>{stat.base_stat}</span></div>
+                )}
+
+              </div>
             </div>
           </div>
         </div>
