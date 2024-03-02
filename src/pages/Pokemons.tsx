@@ -36,7 +36,7 @@ export default function Pokemons() {
         {filteredPkms?.map((pkm) => (
           <article key={Number(pkm.id)}>
             <Link
-              to={`/pokemons/${pkm.name.toLowerCase()}`}
+              to={`/my-pokeapp/pokemons/${pkm.name.toLowerCase()}`}
               className={styles.listItem}
             >
               <img
