@@ -12,7 +12,7 @@ export default function Header({ query, setQuery }: HeaderProps) {
 
   return (
     <header className={styles.header}>
-      <Link to={"/my-pokeapp/"}>
+      <Link to={"/"}>
         <h2 className={styles.brand}>
           <img src={pokeicon} alt="Pokemon" className={styles.pokeicon} />{" "}
           <span className={styles.brandSm}>Pokemons</span>

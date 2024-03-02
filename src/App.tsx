@@ -7,12 +7,12 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/my-pokeapp/" element={<Pokemons />} />
-        <Route path="/my-pokeapp/items" element={<Items />} />
-        <Route path="/my-pokeapp/pokemons" element={<Pokemons />} />
-        <Route path="/my-pokeapp/pokemons/:name" element={<Pokemon />} />
-        <Route path="/my-pokeapp/type" element={<Type />} />
-        <Route path="/my-pokeapp/map" element={<Map />} />
+        <Route path="/" element={<Pokemons />} />
+        <Route path="/items" element={<Items />} />
+        <Route path="/pokemons" element={<Pokemons />} />
+        <Route path="/pokemons/:name" element={<Pokemon />} />
+        <Route path="/type" element={<Type />} />
+        <Route path="/map" element={<Map />} />
       </Routes>
    {/*    <div className="App">
     
