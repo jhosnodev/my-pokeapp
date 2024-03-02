@@ -10,8 +10,12 @@ export type PokemonTypes = {
 
 export type PokemonDetail = {
   id: string,
+  genera: string,
   name: string,
   imgSrc: string,
+  base_happiness: number,
+  habitat: string,
+  generation: string,
   weight: number,
   height: number,
   types: PkmTypes[],
