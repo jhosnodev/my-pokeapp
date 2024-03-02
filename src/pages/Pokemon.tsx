@@ -1,6 +1,6 @@
 import { PokemonDetail } from "../types/types";
 import { useNavigate, useParams } from "react-router-dom";
-import { Footer, Header } from "../components";
+import {  Header } from "../components";
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import style from "./pokemon.module.css";

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Header, Footer } from '../components'
+import { Header} from '../components'
 
 export default function Home() {
   const [query, setQuery] = useState("")

@@ -1,7 +1,7 @@
 import { Pokemon } from "../types/types";
 
 import { useEffect, useState } from "react";
-import { Header, Footer } from "../components";
+import { Header } from "../components";
 import styles from "./pokemons.module.css";
 import { fetchPkms } from "../api/fetchPokemons";
 
