@@ -25,7 +25,7 @@ The pokeapp is a kind of pokedex, that's means comprehensive encyclopedia of Pok
 
 ## Demo
 
-![My-Pokeapp | demo ]('/src/assets/demo.gif'){width=width height=height}
+![My-Pokeapp | demo ](/src/assets/demo.gif)
 
 
 ## Deployment
