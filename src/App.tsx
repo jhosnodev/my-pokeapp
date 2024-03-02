@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Pokemons />} />
+        <Route path="/my-pokeapp/" element={<Pokemons />} />
         <Route path="/items" element={<Items />} />
         <Route path="/pokemons" element={<Pokemons />} />
         <Route path="/pokemons/:name" element={<Pokemon />} />
