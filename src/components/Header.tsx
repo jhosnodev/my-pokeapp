@@ -1,5 +1,5 @@
 import styles from "./Header.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import pokeicon from "../assets/images/pokeicon.png";
 
 type HeaderProps = {
@@ -8,7 +8,7 @@ type HeaderProps = {
 };
 
 export default function Header({ query, setQuery }: HeaderProps) {
-  // const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
   return (
     <header className={styles.header}>
@@ -18,7 +18,8 @@ export default function Header({ query, setQuery }: HeaderProps) {
           <span className={styles.brandSm}>Pokemons</span>
         </h2>
       </Link>
-     
+      {pathname === "/" &&
+
         <input
           className={styles.SearchInput}
           value={query}
@@ -26,7 +27,8 @@ export default function Header({ query, setQuery }: HeaderProps) {
           onChange={(event) => setQuery(event.target.value.trim())}
           type="text"
         />
-      
+      }
+
     </header>
   );
 }

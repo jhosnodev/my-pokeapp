@@ -67,6 +67,7 @@
 }
 @media screen and (min-width: 560px) {
   .cardBody {
+    background-position: left top;
     flex-direction: row;
     width: 100%;
   }
