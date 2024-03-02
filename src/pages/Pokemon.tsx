@@ -53,64 +53,66 @@ export default function Pokemon() {
         <div
           className={style.curved}
           style={{
-            backgroundImage: `${pkmTypes[capitalizeWords(pkm?.types[0]?.name)].color
-              }`,
+            background: `${pkmTypes[capitalizeWords(pkm?.types[0]?.name)].color}`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right",
           }}
         ></div>
-        <div className={style.cardBody}>
-          {/* style={{background:`${pkmTypes[capitalizeWords(pkm.types[0].name)].color}` }} */}
-          <img
-            src={pkm.imgSrc}
-            alt={`${pkm.id} - ${pkm.name}`}
-            className={style.cardImg}
-          />
-          <div className={style.cardInfoContainer}>
-            <div className={style.cardHeader}>
-              <h2>
-                {pkm?.id}
-                {" - "}
-                {capitalizarPrimeraLetra(pkm?.name)}
-              </h2>
-              <div className={style.typesLabelContainer}>
-                {pkm.types.map((type: any, index: number) => (
-                  <a
-                    key={index}
-                    href={type.url}
-                    className={style.typesLabel}
-                    style={{
-                      backgroundImage: `linear-gradient(105deg,${pkmTypes[capitalizeWords(type.name)].color
-                        } 55px,#5A5A5A 56px,#5A5A5A)`,
-                    }}
-                  >
-                    <img
-                      src={pkmTypes[capitalizeWords(type.name)].icon}
-                      alt={`${pkmTypes[capitalizeWords(type.name)].value}`}
-                    />
-                    {pkmTypes[capitalizeWords(type.name)].value}
-                  </a>
-                ))}
-              </div>
+        <div className={style.cardContainer}>
+          <div className={style.cardBody}>
+            {/* style={{background:`${pkmTypes[capitalizeWords(pkm.types[0].name)].color}` }} */}
+            <img
+              src={pkm.imgSrc}
+              alt={`${pkm.id} - ${pkm.name}`}
+              className={style.cardImg}
+            />
+            <div className={style.cardInfoContainer}>
+              <div className={style.cardHeader}>
+                <h2>
+                  {pkm?.id}
+                  {" - "}
+                  {capitalizarPrimeraLetra(pkm?.name)}
+                </h2>
+                <div className={style.typesLabelContainer}>
+                  {pkm.types.map((type: any, index: number) => (
+                    <a
+                      key={index}
+                      href={type.url}
+                      className={style.typesLabel}
+                      style={{
+                        backgroundImage: `linear-gradient(105deg,${pkmTypes[capitalizeWords(type.name)].color
+                          } 55px,#5A5A5A 56px,#5A5A5A)`,
+                      }}
+                    >
+                      <img
+                        src={pkmTypes[capitalizeWords(type.name)].icon}
+                        alt={`${pkmTypes[capitalizeWords(type.name)].value}`}
+                      />
+                      {pkmTypes[capitalizeWords(type.name)].value}
+                    </a>
+                  ))}
+                </div>
 
+              </div>
+              <p>{pkm.genera}</p>
+              <p>Habitat: {pkm.habitat}</p>
+              <p>Generation: {pkm.generation}</p>
+              <p>Base happiness: {pkm.base_happiness}</p>
+              <p>Weight: {pkm?.weight}Kg</p>
+              <p>Height: {pkm?.height}mt</p>
+              <p>
+                Abilities:{" "}
+                {pkm?.abilities.map((ability: any, index: number) => (
+                  <span key={index} className={style.abilitiesList}>
+                    {ability.name}
+                  </span>
+                ))}
+              </p>
             </div>
-            <p>{pkm.genera}</p>
-            <p>Habitat: {pkm.habitat}</p>
-            <p>Generation: {pkm.generation}</p>
-            <p>Base happiness: {pkm.base_happiness}</p>
-            <p>Weight: {pkm?.weight}Kg</p>
-            <p>Height: {pkm?.height}mt</p>
-            <p>
-              Abilities:{" "}
-              {pkm?.abilities.map((ability: any, index: number) => (
-                <span key={index} className={style.abilitiesList}>
-                  {ability.name}
-                </span>
-              ))}
-            </p>
           </div>
         </div>
-
       </main>
-      <Footer />
+{/*       <Footer /> */}
     </>
   );
 }

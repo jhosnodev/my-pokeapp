@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Header query={query} setQuery={setQuery} />
       <main>Home</main>
-      <Footer />
+    {/*   <Footer /> */}
     </>
   )
 }

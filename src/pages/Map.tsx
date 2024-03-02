@@ -8,7 +8,7 @@ export default function Map() {
     <>
       <Header query={query} setQuery={setQuery} />
       <main>Map</main>
-      <Footer />
+{/*       <Footer /> */}
     </>
   )
 }

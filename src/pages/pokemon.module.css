@@ -2,13 +2,9 @@
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100%;
 }
 
 .curved {
-  position: relative;
-  top: 0;
-    
   height: 50vh;
   border-bottom-left-radius: 150% 100%;
   border-bottom-right-radius: 150% 100%;
@@ -26,7 +22,7 @@
   padding: 0.5rem;
   border-radius: 15px;
   position: fixed;
-  bottom: 8rem;
+  bottom: 1rem;
   right: 1rem;
   transition: all 0.2s ease-in-out 0.2s;
   border: none;
@@ -46,6 +42,14 @@
   gap: 1rem;
 }
 
+.cardContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  
+}
+
 .cardBody {
   position: absolute;
   top: 4rem;
@@ -54,7 +58,10 @@
   align-items: center;
   align-content: center;
   flex-wrap: nowrap;
-  padding: 2rem;
+
+  background: url("../assets/pokeball.png");
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .cardImg {

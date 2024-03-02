@@ -8,7 +8,7 @@ export default function Items() {
     <>
       <Header query={query} setQuery={setQuery} />
       <main>Items</main>
-      <Footer />
+{/*       <Footer /> */}
     </>
   )
 }

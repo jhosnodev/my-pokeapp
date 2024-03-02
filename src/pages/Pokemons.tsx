@@ -69,7 +69,7 @@ export default function Pokemons() {
           </article>
         ))}
       </main>
-      <Footer />
+{/*       <Footer /> */}
     </>
   );
 }

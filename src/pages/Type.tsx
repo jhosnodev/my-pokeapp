@@ -8,7 +8,7 @@ export default function Type() {
     <>
       <Header query={query} setQuery={setQuery} />
       <main>Type</main>
-      <Footer />
+{/*       <Footer /> */}
     </>
   )
 }
